@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Всі новини</title>
+    <style>
+        /* Трохи стилів, щоб виглядало гарно */
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .news-block {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .meta { color: #666; font-size: 0.9em; margin-bottom: 10px; }
+        h2 { color: #333; margin-top: 0; }
+        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+
+    <a href="/" class="back-link">← На головну</a>
+
+    <h1>Наші новини</h1>
+
+    {% for item in news %}
+        <div class="news-block">
+            <h2>{{ item.title }}</h2>
+            <div class="meta">
+                📅 Дата: {{ item.date }} | 👤 Автор: {{ item.author }}
+            </div>
+            <p>{{ item.content }}</p>
+        </div>
+    {% empty %}
+        <p>На жаль, новин поки що немає.</p>
+    {% endfor %}
+
+</body>
+</html>
