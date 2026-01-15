@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Відеоматеріали | NULPTRANS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .exam-alert {
+            background-color: #ffeb3b;
+            color: #b71c1c;
+            border: 3px solid #b71c1c;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .audio-box {
+            background-color: #e3f2fd; /* Світло-синій фон */
+            border-left: 5px solid #2196f3;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container mt-4 mb-5">
+        <a href="/" class="btn btn-primary mb-4">⬅ На головну</a>
+
+        <div class="exam-alert">
+            Цей розділ створено виключно для демонстрації на екзамені ⚠️
+        </div>
+
+        <div class="audio-box shadow-sm">
+            <h4 class="fw-bold text-primary mb-3"> </h4>
+            <p class="text-muted">Коротке пояснення вибору теми та матеріалів:</p>
+            
+            <audio controls class="w-100">
+                <source src="{% static 'audio.mp3' %}" type="audio/mpeg">
+                Ваш браузер не підтримує аудіо елемент.
+            </audio>
+        </div>
+
+        <h2 class="mb-4">📹 Логістичні процеси (Відео)</h2>
+
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube-nocookie.com/embed/Vr4wEf4Psxw" 
+                                title="Amazon" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Автоматизація складу (Amazon)</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube-nocookie.com/embed/BiSYoeqb_VY" 
+                                title="Supply Chain" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Як працює світова логістика</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube-nocookie.com/embed/O-Lp8Zt2X4E" 
+                                title="Food Logistics" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Логістика продуктів харчування</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube-nocookie.com/embed/4DKrcpa8Z_E" 
+                                title="UPS Worldport" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Сортувальний центр UPS Worldport</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
