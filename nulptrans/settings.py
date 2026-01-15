@@ -127,3 +127,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 LOGIN_URL = 'two_factor:login'
 LOGIN_REDIRECT_URL = '/'
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Цей рядок змушує Render "побачити" твій audio.mp3
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
